@@ -12,33 +12,30 @@ import 'package:flutter_application_2/Screens/Licension/licension_screen.dart';
 import 'package:flutter_application_2/Screens/Register_company/register_company_screen.dart';
 
 class Background extends StatelessWidget {
-
-
-
-
-@override
+  @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size; 
+    Size size = MediaQuery.of(context).size;
     //This size provides us total height and wight of our screenа
     return Container(
-      alignment:Alignment.topCenter,
+      alignment: Alignment.topCenter,
       padding: EdgeInsets.only(top: size.height * 0.1685),
-      constraints: BoxConstraints(maxHeight: 1080, minHeight: 360, maxWidth: 1920, minWidth: 640),
+      constraints: BoxConstraints(
+          maxHeight: 1080, minHeight: 360, maxWidth: 1920, minWidth: 640),
       width: size.width * 1,
-     /*  height: size.height * 1, */
+      /*  height: size.height * 1, */
       decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage("assets/png/back_ml_simple.png",)
-        )
-      ),
+          image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(
+                "assets/png/back_ml_simple.png",
+              ))),
       child: Container(
         /* margin: EdgeInsets.only(top: size.height * 0.1685), */
         width: 1446,
         height: 698,
         child: Column(
           children: [
-            Content(size: size), 
+            Content(size: size),
           ],
         ),
       ),
@@ -57,32 +54,31 @@ class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Row(
-          children: [
-            Expanded(
-              child: Container(
-                color: Color.fromRGBO(248, 248, 248, 1),
-              ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              color: Color.fromRGBO(248, 248, 248, 1),
             ),
-            Expanded(
-              child: Container(
-                color: Color.fromRGBO(248, 248, 248, 1),
-              ),
+          ),
+          Expanded(
+            child: Container(
+              color: Color.fromRGBO(248, 248, 248, 1),
             ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                color: Colors.white,
-              ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              color: Colors.white,
             ),
-            Expanded(
-              child: Container(
-                color: Color.fromRGBO(248, 248, 248, 1),
-              ),
+          ),
+          Expanded(
+            child: Container(
+              color: Color.fromRGBO(248, 248, 248, 1),
             ),
-          ],
-        ),
-      );        
-    
+          ),
+        ],
+      ),
+    );
   }
 }
